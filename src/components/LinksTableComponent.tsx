@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button} from '@mui/material';
-import axios from 'axios';
 
 interface Link {
   _id?: string | any;
@@ -23,8 +22,13 @@ interface Props {
 export default function LinksTableComponent(props:Props) {
 
   function open(link: string){
+    if (link.startsWith("https://") || link.startsWith("http://")){
+      window.open(link, '_blank');
+    }else{
+      window.open("https://"+link, '_blank');
+    }
     console.log('LINK: ', link)
-    window.open("https://"+link, '_blank');
+    
   }
 
   // const [links, setLinks] = useState([{original_url: "www.google.com", shortened_url: "goocom"}])
