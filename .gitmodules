@@ -1,0 +1,3 @@
+[submodule "url-shortener-backend"]
+	path = url-shortener-backend
+	url = https://github.com/illustroja/url-shortener-backend
