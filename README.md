@@ -11,7 +11,7 @@ Step 3: run nestJS backend:
       
         
 ## Skills picked up from this project:
-### NestJS, MongoDB, revision on ReactJS
+### NestJS, MongoDB, revision on ReactJS + TypeScript
 
   
 ## To-Do:
