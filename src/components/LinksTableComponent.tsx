@@ -1,5 +1,13 @@
-import React from "react";
-import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button} from '@mui/material';
+import { 
+  Table, 
+  TableBody, 
+  TableCell, 
+  TableContainer, 
+  TableHead, 
+  TableRow, 
+  Paper, 
+  Button 
+} from '@mui/material';
 
 interface Link {
   _id?: string | any;
@@ -17,10 +25,10 @@ interface Props {
 /**
  * This is the LinksTableComponent template component!
  * @param {Props} props for React Functional Component
- * @return {React.FC}: The JSX Code for BasicInfo profile  template component.
+ * @return {React.FC}: The JSX Code for LinksTableComponent template component.
  */
 export default function LinksTableComponent(props:Props) {
-
+  // Function to open url links when shortened links are clicked 
   function open(link: string){
     if (link.startsWith("https://") || link.startsWith("http://")){
       window.open(link, '_blank');
@@ -28,10 +36,7 @@ export default function LinksTableComponent(props:Props) {
       window.open("https://"+link, '_blank');
     }
     console.log('LINK: ', link)
-    
   }
-
-  // const [links, setLinks] = useState([{original_url: "www.google.com", shortened_url: "goocom"}])
 
 return (
     <>    
@@ -60,7 +65,6 @@ return (
               <TableCell align="right">
                 <Button  onClick={() => open(link.original_url)} size="small" variant="contained">{link.shortened_url}</Button>
               </TableCell>
-              
             </TableRow>
           ))}
         </TableBody>
